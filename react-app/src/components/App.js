@@ -1,8 +1,7 @@
 import React,{Component} from 'react';
-import LifeCycle from './LifeCycle';
+// import LifeCycle from './LifeCycle';
 import Style1 from './style/Style1';
 import Style2 from './style/Style2';
-
 class App extends Component{
     constructor(props){
         super(props);
@@ -18,7 +17,7 @@ class App extends Component{
         return (
             <div>
                 {/*数据相关*/}
-               <LifeCycle name={this.state.name}/>
+               {/*<LifeCycle name={this.state.name}/>*/}
                {/*样式相关*/}
                 <Style1 />
                 <Style2 />

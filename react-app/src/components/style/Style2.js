@@ -1,5 +1,5 @@
 import React,{Component,Fragment} from 'react';
-import style from '../../css/style2.css';
+import '../../css/style2.css';
 class Style2 extends Component{
     constructor(props){
         super(props);
@@ -8,7 +8,7 @@ class Style2 extends Component{
 
         return (
             <Fragment>
-                <p className={style.pp}>测试css样式2</p>
+                <p className={'pp'}>测试css样式2</p>
             </Fragment>
         );
     }
