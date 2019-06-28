@@ -1,5 +1,5 @@
 import React,{Component,Fragment} from 'react';
-import '../../css/style2.css';
+import '../../css/style2.modules.css';
 class Style2 extends Component{
     constructor(props){
         super(props);

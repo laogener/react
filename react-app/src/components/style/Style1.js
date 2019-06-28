@@ -1,5 +1,5 @@
 import React,{Component,Fragment} from 'react';
-import Style from './style1.css';
+import Style from '../../css/style1.module.css';
 console.log(Style);
 let inlineStyle = {
     backgroundColor:'blue'
