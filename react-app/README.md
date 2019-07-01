@@ -12,3 +12,5 @@ componentDidMount():
 编译完成，并且渲染到真时的dom中,可以做dom的处理,可以做具体的事件监听,某些插件的实例
  
 生命周期：https://blog.csdn.net/qq_34134278/article/details/81328464
+
+[]单独使用时默认的是引用地址，为true；运算符比较时被转换为0，false
