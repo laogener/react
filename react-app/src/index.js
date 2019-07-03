@@ -4,7 +4,8 @@ import ReactDOM from 'react-dom';
 // import IfElseMap from './components/IfElseMap';
 // import Com from './components/Com';
 // import Style from './components/Style';
- import Parent from './components/message/Parent';
+//  import Parent from './components/message/Parent';
+ import Index from './components/shoping/Index';
 
 
 // import './static/reset.css';
@@ -13,7 +14,8 @@ import ReactDOM from 'react-dom';
 // ReactDOM.render(<LifeCycle />, document.getElementById('root'));
 // ReactDOM.render(<IfElseMap />, document.getElementById('root'));
 // ReactDOM.render(<Com />, document.getElementById('root'));
-ReactDOM.render(<Parent />, document.getElementById('root'));
+// ReactDOM.render(<Parent />, document.getElementById('root'));
+ReactDOM.render(<Index />, document.getElementById('root'));
 
 
 // 销毁组件
