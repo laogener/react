@@ -13,4 +13,7 @@ componentDidMount():
  
 生命周期：https://blog.csdn.net/qq_34134278/article/details/81328464
 
-[]单独使用时默认的是引用地址，为true；运算符比较时被转换为0，false
+[]单独使用时默认的是引用地址，为true；运算符比较时被转换为0，false  
+
+react router英文官方文档：https://reacttraining.com/react-router/web/guides/quick-start  
+

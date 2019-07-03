@@ -6,7 +6,8 @@ import ReactDOM from 'react-dom';
 // import Style from './components/Style';
 //  import Parent from './components/message/Parent';
 //  import Index from './components/shoping/Index';
- import Ref from './components/ref/Ref';
+//  import Ref from './components/ref/Ref';
+ import Main from './components/router/Main';
 
 
 // import './static/reset.css';
@@ -16,8 +17,9 @@ import ReactDOM from 'react-dom';
 // ReactDOM.render(<IfElseMap />, document.getElementById('root'));
 // ReactDOM.render(<Com />, document.getElementById('root'));
 // ReactDOM.render(<Parent />, document.getElementById('root'));
+// ReactDOM.render(<Ref />, document.getElementById('root'));
 // ReactDOM.render(<Index />, document.getElementById('root'));
-ReactDOM.render(<Ref />, document.getElementById('root'));
+ReactDOM.render(<Main />, document.getElementById('root'));
 
 
 // 销毁组件
