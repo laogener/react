@@ -13,7 +13,7 @@ class Index extends Component{
                     <Link to='/tab/tab2'>tab2</Link>
                 </p>
 
-                <p>{this.props.children}</p>
+                <div>{this.props.children}</div>
             </div>
         );
     }

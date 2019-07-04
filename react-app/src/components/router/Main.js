@@ -27,8 +27,15 @@ let RouterBase = ()=>{
         <Router>
             <App>
                 <Switch>
+                    {/*1.越详细的路由越靠前*/}
+                    {/*2.给权限大的路由加一个exact属性，精确匹配*/}
+                    {/*3.路由组件渲染方式：*/}
+                        {/*1.component，可以渲染状态组件和无状态组件*/}
+                        {/*2.render只可以渲染无状态组件*/}
+
                     <Route exact path="/" component={Index}/>
-                    <Route path="/tab" component={childRouter} />
+                    {/*<Route path="/tab" component={childRouter} />*/}
+                    <Route path="/tab" render={childRouter} />
                 </Switch>
             </App>
         </Router>
