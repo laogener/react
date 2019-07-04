@@ -3,6 +3,7 @@ import {
     HashRouter as Router,//后面带#
     // BrowserRouter as Router,
     Route,
+    Redirect,
     Switch
 } from "react-router-dom";
 import Index from './components/Index';
@@ -11,6 +12,8 @@ import Tab from './components/tab/Index';
 import Tab1 from './components/tab/Tab1';
 import Tab2 from './components/tab/Tab2';
 import App from './components/App';
+import NavLinks from './components/navlink/NavLinks';
+import Hocgetdata from './components/Hocgetdata';
 
 let childRouter = () => {
     return (
@@ -22,6 +25,22 @@ let childRouter = () => {
         </Tab>
     )
 }
+
+let NavLinkRouter = () => {
+    return (
+        <NavLinks>
+            <Switch>
+                <Route path="/navlink/child1" render={() => <h3>子组件child1</h3>} />
+                <Route path="/navlink/child2" render={() => <h3>子组件child2</h3>} />
+            </Switch>
+        </NavLinks>
+    )
+}
+
+let RouterRedirect = ()=>{
+    return (<Redirect to='/Index' />)
+}
+
 let RouterBase = ()=>{
     return (
         <Router>
@@ -36,6 +55,9 @@ let RouterBase = ()=>{
                     <Route exact path="/" component={Index}/>
                     {/*<Route path="/tab" component={childRouter} />*/}
                     <Route path="/tab" render={childRouter} />
+                    <Route path="/navlink" render={NavLinkRouter} />
+                    <Route path="/hocgetdata" component={Hocgetdata} />
+                    <Route path="/test" render={RouterRedirect} />
                 </Switch>
             </App>
         </Router>
