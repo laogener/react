@@ -7,34 +7,29 @@ import axios from 'axios';
 // 3.高阶组件使用时会接收一个组件作为参数
 // 4.一般用state的状态来管理是否渲染传入组件的时间
 // 5.如果处理数据。获取数据或其他的业务处理完毕，再渲染传入的组件
-let GetDataHocAsync = (Com,urlList)=>{
+let HandleDataHoc = (Com,urlList)=>{
     return (class Index extends Component{
         constructor(props){
             super(props);
             this.state = {
-                state:false,
-                list:[]
+                data:[]
             }
         }
-        async componentWillMount (){
-            let data = [];
-            for(var i = 0;i<urlList.length;i++){
-                data[i] = await axios(urlList[i])
-            }
+        componentWillMount (){
             this.setState({
-                state:true,
-                list:data
-            },()=>{
-                console.log(this.state);
+                data:this.props.getData[0].data.result.map((i) => {
+                    i.time = new Date().getTime();
+                    return i
+                })
             })
         }
 
         render(){
-            return <div>{this.state.state ? <Com getData={this.state.list} {...this.props}/> : null}</div>
+            return <div><Com initdata = {this.state.data} {...this.props}/></div>
         }
 
     })
 }
 
 
-export default GetDataHocAsync;
+export default HandleDataHoc;
