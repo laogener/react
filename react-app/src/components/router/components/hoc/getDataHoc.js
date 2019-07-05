@@ -15,30 +15,27 @@ let getDataHoc = (Com)=>{
                 state:false,
                 list:[]
             }
+
         }
-        componentWillMount(){
+        componentWillMount (){
             axios.post('/getJoke',  {
                 params: {
                     page: 1,
                     count: 10,
                     type: 'video',
                 }
-        }).then((res)=>{
+            }).then((res)=>{
                 this.setState({
                     state:true,
                     list:res.data.result
+                },()=>{
+                    console.log(this.state);
                 })
             })
         }
-        componentWillReceiveProps(nextProps) { // 父组件重传props时就会调用这个方法
-            this.setState({
-                state:nextProps.state,
-                list:nextProps.list
-            });
-        }
+
         render(){
-            return <div>
-                {this.state.state?<Com getDtat={this.state.list} />:null}</div>
+            return <div>{this.state.state ? <Com getData={this.state.list} /> : null}</div>
         }
 
     })

@@ -5,7 +5,7 @@ class Hocgetdata extends Component{
         super(props);
         console.log(this.props.getData);
         this.state = {
-            state:this.props.getData,
+            state:this.props.getData
         }
 
     }
@@ -14,7 +14,7 @@ class Hocgetdata extends Component{
         return (
             <div>
                 <h3>高阶组件请求数据</h3>
-                <ul>{this.state.state}</ul>
+                <ul>{this.state.state[0].name}</ul>
             </div>
         );
     }
