@@ -17,6 +17,12 @@ import Hocgetdata from './components/Hocgetdata';
 import Hocgetdataasync from './components/Hocgetdataasync';
 import HocHandleData from './components/HocHandleData';
 
+// 封装了一个组件，采用属性传值得方式，将将要加载的组件使用import方法进行包装，传入LazyComponent组件，然后进行异步加载，加载完毕进行渲染（封装的LazyComponent组件）
+import LazyComponent from './tool/lazyComponent';
+let lazyComponentHandle = ()=>{
+    return <LazyComponent lazy={() => {return import('./components/LazyCom')}} />
+}
+
 let childRouter = () => {
     return (
         <Tab>
@@ -62,6 +68,9 @@ let RouterBase = ()=>{
                     <Route path="/hocgetdataasync" component={Hocgetdataasync} />
                     <Route path="/hocHandleData" component={HocHandleData} />
                     <Route path="/test" render={RouterRedirect} />
+
+                    <Route path="/lazyComponent" component={lazyComponentHandle} />
+
                 </Switch>
             </App>
         </Router>
