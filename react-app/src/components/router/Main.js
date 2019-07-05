@@ -14,6 +14,7 @@ import Tab2 from './components/tab/Tab2';
 import App from './components/App';
 import NavLinks from './components/navlink/NavLinks';
 import Hocgetdata from './components/Hocgetdata';
+import Hocgetdataasync from './components/Hocgetdataasync';
 
 let childRouter = () => {
     return (
@@ -57,6 +58,7 @@ let RouterBase = ()=>{
                     <Route path="/tab" render={childRouter} />
                     <Route path="/navlink" render={NavLinkRouter} />
                     <Route path="/hocgetdata" component={Hocgetdata} />
+                    <Route path="/hocgetdataasync" component={Hocgetdataasync} />
                     <Route path="/test" render={RouterRedirect} />
                 </Switch>
             </App>

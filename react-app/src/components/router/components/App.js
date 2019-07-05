@@ -6,10 +6,12 @@ class App extends Component{
     }
     render(){
         return (
-            <div className='app'>
-                <Link to='/tab'>tab</Link>
+            <ul className='app'>
+                <li><Link to='/tab'>tab</Link></li>
+                <li><Link to='/hocgetdata'>高阶组件获取数据</Link></li>
+                <li><Link to='/hocgetdataasync'>高阶组件获取数据，接口间存在依赖</Link></li>
                 {this.props.children}
-            </div>
+            </ul>
         );
     }
 

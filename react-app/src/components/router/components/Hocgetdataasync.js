@@ -1,6 +1,6 @@
 import React,{Component} from 'react';
-import getDataHoc from './hoc/getDataHoc';
-class Hocgetdata extends Component{
+import GetDataHocAsync from './hoc/GetDataHocAsync';
+class Hocgetdataasync extends Component{
     constructor(props){
         super(props);
         console.log(this.props.getData);
@@ -23,5 +23,5 @@ class Hocgetdata extends Component{
     }
 
 }
-let Com = getDataHoc(Hocgetdata,[{url:'/getJoke',method:'post',params:{page: 1, count: 10, type: 'video'}},{url:'/getSingleJoke',method:'get',params:{sid: 28654780}}]);
+let Com = GetDataHocAsync(Hocgetdataasync,[{url:'/getJoke',method:'post',params:{page: 1, count: 10, type: 'video'}},{url:'/getSingleJoke',method:'get',params:{sid: 28654780}}]);
 export default Com;
