@@ -1,5 +1,7 @@
 import React, {Component} from 'react';
 import {Route} from "react-router";
+import Login from './Login';
+
 
 class User extends Component {
     render() {
@@ -11,8 +13,10 @@ class User extends Component {
         );
     }
 }
-
+let childrenRouter = ()=>{
+    return <User><Login/></User>
+}
 let routerHandle = ()=>{
-    return <Route exact path='/user' component={User}/>
+    return <Route  path='/user' component={childrenRouter}/>
 }
 export default routerHandle;

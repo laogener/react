@@ -10,11 +10,14 @@ import App from '../components/App';
 import Index from '../components/Index';
 
 
+import User from '../components/user/User'
+
 export default ()=>{
     return (
         <Router>
             <App>
                 <Index />
+                <User />
             </App>
         </Router>
     )
