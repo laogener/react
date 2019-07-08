@@ -1,3 +1,5 @@
+rcc快捷键创建class
+
 constructor里面做数据相关的操作  
 
 render()纯函数：  

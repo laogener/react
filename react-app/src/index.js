@@ -7,7 +7,8 @@ import ReactDOM from 'react-dom';
 //  import Parent from './components/message/Parent';
 //  import Index from './components/shoping/Index';
 //  import Ref from './components/ref/Ref';
- import Main from './components/router/Main';
+//  import Main from './components/router/Main';
+ import Router from './srcLogin/routers/Index';
 
 
 // import './static/reset.css';
@@ -19,7 +20,8 @@ import ReactDOM from 'react-dom';
 // ReactDOM.render(<Parent />, document.getElementById('root'));
 // ReactDOM.render(<Ref />, document.getElementById('root'));
 // ReactDOM.render(<Index />, document.getElementById('root'));
-ReactDOM.render(<Main />, document.getElementById('root'));
+// ReactDOM.render(<Main />, document.getElementById('root'));
+ReactDOM.render(<Router />, document.getElementById('root'));
 
 
 // 销毁组件

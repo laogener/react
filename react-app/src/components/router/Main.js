@@ -21,7 +21,10 @@ import HocHandleData from './components/HocHandleData';
 import LazyComponent from './tool/lazyComponent';
 let lazyComponentHandle = ()=>{
     return <LazyComponent lazy={() => {return import('./components/LazyCom')}} />
-}
+};
+
+
+
 
 let childRouter = () => {
     return (
