@@ -9,20 +9,28 @@ export default (Com)=>{
             this.state = {
                 Com:null
             }
-            console.log(props);
+
         }
         componentWillMount(){
             // 模拟登陆检测
             if(sessionStorage.getItem('userId')){
-                axios.post('/singlePoetry',{sid:sessionStorage.getItem('userId')},(res)=>{
-                    if(res.code = '200'){
+                axios.get('/singlePoetry',{sid:sessionStorage.getItem('userId')}).then((res)=>{
+                    console.log(res);
+                    if(res.data.code == '200'){
                         this.setState({Com:Com})
                     }else{
-                        this.props.history.push('/user/login')
+                        // 指定跳转
+                        sessionStorage.setItem('url',this.props.match.path);
+                        this.props.history.push('/user/login');
+                        // this.props.history.push({
+                        //     pathname:'/user/login',
+                        //     state:{url:this.props.match.path}
+                        // });
                     }
                 })
             }else{
-                this.props.history.push('/user/login')
+                sessionStorage.setItem('url',this.props.match.path);
+                this.props.history.push('/user/login');
             }
         }
         render() {

@@ -1,29 +1,21 @@
 import React, {Component} from 'react';
 import {Route,Link} from "react-router-dom";
-import PropTypes from 'prop-types';
 
-class Login extends Component {
-    // static contextTypes ={
-    //     router:PropTypes.object.isRequired
-    // }
+class Register extends Component {
+
     constructor(props,contextTypes){
         super(props);
         this.state={
             usernams:'',
             password:''
         }
-        console.log(111);
-        console.log(this.props);
     }
-    login(){
-        // 登陆请求成功后
-        sessionStorage.setItem('userId','123123');
-        alert('登陆成功');
-        this.props.history.push('/')
-        // this.props.history.push(sessionStorage.getItem('url'))
-    }
-    register(){
 
+    registerFn(){
+        // 注册请求成功后
+        sessionStorage.setItem('userId','12');
+        alert('注册成功');
+        this.props.history.push('/user/login')
     }
     changeData(e){
         this.setState({
@@ -33,7 +25,7 @@ class Login extends Component {
     render() {
         return (
             <div>
-                <h2>这是登陆界面</h2>
+                <h2>这是注册界面</h2>
                 <ul>
                     <li>
                         <label htmlFor="userName">用户名：</label>
@@ -44,8 +36,7 @@ class Login extends Component {
                         <input type="password" id='passWord' name='password' onChange={(e)=>this.changeData(e)}/>
                     </li>
                     <li>
-                        <button onClick={()=>this.login()}>登陆</button>
-                        <Link to='/user/register'>注册</Link>
+                        <button onClick={()=>this.registerFn()}>注册</button>
                     </li>
                 </ul>
             </div>
@@ -54,6 +45,6 @@ class Login extends Component {
 }
 
 let routerHandle = ()=>{
-    return <Route  path='/user/login' component={Login}/>
+    return <Route  path='/user/register' component={Register}/>
 }
 export default routerHandle;

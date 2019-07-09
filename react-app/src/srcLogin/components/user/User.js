@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import {Route} from "react-router";
 import Login from './Login';
+import Register from './Register';
 
 
 class User extends Component {
@@ -14,7 +15,7 @@ class User extends Component {
     }
 }
 let childrenRouter = ()=>{
-    return <User><Login/></User>
+    return <User><Login/><Register/></User>
 }
 let routerHandle = ()=>{
     return <Route  path='/user' component={childrenRouter}/>
