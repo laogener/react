@@ -8,7 +8,8 @@ import ReactDOM from 'react-dom';
 //  import Index from './components/shoping/Index';
 //  import Ref from './components/ref/Ref';
 //  import Main from './components/router/Main';
- import Router from './srcLogin/routers/Index';
+//  import Router from './srcLogin/routers/Index';
+ import Router from './srcFlux/routers/Index';
 
 
 // import './static/reset.css';
