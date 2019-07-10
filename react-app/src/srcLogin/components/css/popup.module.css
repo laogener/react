@@ -1,0 +1,19 @@
+.popup{
+    width: 500px;
+    height: 300px;
+    background-color: lightblue;
+    border: 1px solid #ccc;
+    position: fixed;
+    top: 200px;
+    left: 50%;
+    margin-left: -250px;
+}
+.popup h3{
+    text-align: center;
+}
+.popup p{
+    margin-top: 50px;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+}
