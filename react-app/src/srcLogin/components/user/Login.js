@@ -3,24 +3,20 @@ import {Route,Link} from "react-router-dom";
 import PropTypes from 'prop-types';
 
 class Login extends Component {
-    // static contextTypes ={
-    //     router:PropTypes.object.isRequired
-    // }
-    constructor(props,contextTypes){
+
+    constructor(props){
         super(props);
         this.state={
             usernams:'',
             password:''
         }
-        console.log(111);
-        console.log(this.props);
     }
     login(){
+
         // 登陆请求成功后
         sessionStorage.setItem('userId','123123');
         alert('登陆成功');
         this.props.history.push('/')
-        // this.props.history.push(sessionStorage.getItem('url'))
     }
     register(){
 
