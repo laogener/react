@@ -9,7 +9,8 @@ import ReactDOM from 'react-dom';
 //  import Ref from './components/ref/Ref';
 //  import Main from './components/router/Main';
 //  import Router from './srcLogin/routers/Index';
- import Router from './srcFlux/routers/index';
+//  import Router from './srcFlux/routers/index';
+ import Router from './srcRedux/routers/index';
 
 
 // import './static/reset.css';
