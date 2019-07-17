@@ -1,18 +1,22 @@
 import React, {Component} from 'react';
-import Store from '../redux/index'
-import {actions,ADDNUM} from '../redux/index2'
+import Store,{actions,ADDNUM} from '../redux/index';
 
 
 class Child extends Component {
     constructor(props){
         super(props);
+        this.state={
+            num:props.num
+        }
     }
     addNumHandle(){
-        console.log(actions);
-        console.log(ADDNUM);
-        console.log(actions[ADDNUM]);
+        console.log(111);
         Store.dispatch(actions[ADDNUM]());
     }
+    componentWillReceiveProps(nextProps, nextContext) {
+        this.setState({num:nextProps.num})
+    }
+
     render() {
         return (
             <div>

@@ -10,7 +10,12 @@ import ReactDOM from 'react-dom';
 //  import Main from './components/router/Main';
 //  import Router from './srcLogin/routers/Index';
 //  import Router from './srcFlux/routers/index';
- import Router from './srcRedux/routers/index';
+//  import Router from './srcRedux/routers/index';
+
+
+ import Router from './srcReactRedux/routers/index';
+ import {Provider} from 'react-redux';
+ import Store from './srcReactRedux/redux/index'
 
 
 // import './static/reset.css';
@@ -23,7 +28,9 @@ import ReactDOM from 'react-dom';
 // ReactDOM.render(<Ref />, document.getElementById('root'));
 // ReactDOM.render(<Index />, document.getElementById('root'));
 // ReactDOM.render(<Main />, document.getElementById('root'));
-ReactDOM.render(<Router />, document.getElementById('root'));
+// ReactDOM.render(<Router />, document.getElementById('root'));
+
+ReactDOM.render(<Provider store={Store}><Router /></Provider>, document.getElementById('root'));
 
 
 // 销毁组件
